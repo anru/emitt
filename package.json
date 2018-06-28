@@ -1,5 +1,5 @@
 {
-  "name": "mitter",
+  "name": "emitt",
   "version": "1.2.0",
   "description": "Tiny 250b functional Event Emitter / pubsub.",
   "jsnext:main": "dist/mitt.es.js",
@@ -20,13 +20,13 @@
     "size": "echo \"Gzipped Size: $(strip-json-comments --no-whitespace $npm_package_main | gzip-size | pretty-bytes)\"",
     "release": "npm run build -s && npm run bump && git push --follow-tags origin master && npm publish"
   },
-  "repository": "anru/mitter",
+  "repository": "anru/emitt",
   "keywords": [
     "events",
     "eventemitter",
     "pubsub"
   ],
-  "homepage": "https://github.com/anru/mitt",
+  "homepage": "https://github.com/anru/emitt",
   "authors": [
     "Jason Miller <jason@developit.ca>",
     "Andrey Rublev <version.ru@gmail.com>"

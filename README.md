@@ -1,19 +1,19 @@
 <p align="center">
-  <img src="https://i.imgur.com/BqsX9NT.png" width="300" height="300" alt="mitt">
+  <img src="https://i.imgur.com/BqsX9NT.png" width="300" height="300" alt="emitt">
   <br>
-  <a href="https://www.npmjs.org/package/mitt"><img src="https://img.shields.io/npm/v/mitt.svg?style=flat" alt="npm"></a> <a href="https://travis-ci.org/developit/mitt"><img src="https://travis-ci.org/developit/mitt.svg?branch=master" alt="travis"></a> <a href="https://david-dm.org/developit/mitt"><img src="https://david-dm.org/developit/mitt/status.svg" alt="dependencies Status"></a> <a href="https://unpkg.com/mitt/dist/mitt.umd.js"><img src="http://img.badgesize.io/https://unpkg.com/mitt/dist/mitt.umd.js?compression=gzip" alt="gzip size"></a> <a href="https://packagephobia.now.sh/result?p=mitt"><img src="https://packagephobia.now.sh/badge?p=mitt" alt="install size"></a>
+  <a href="https://www.npmjs.org/package/emitt"><img src="https://img.shields.io/npm/v/emitt.svg?style=flat" alt="npm"></a> <a href="https://travis-ci.org/anru/emitt"><img src="https://travis-ci.org/anru/emitt.svg?branch=master" alt="travis"></a> <a href="https://david-dm.org/anru/emitt"><img src="https://david-dm.org/anru/mitt/status.svg" alt="dependencies Status"></a> <a href="https://unpkg.com/emitt/dist/mitt.umd.js"><img src="http://img.badgesize.io/https://unpkg.com/emitt/dist/mitt.umd.js?compression=gzip" alt="gzip size"></a> <a href="https://packagephobia.now.sh/result?p=emitt"><img src="https://packagephobia.now.sh/badge?p=emitt" alt="install size"></a>
   
 </p>
 
-# Mitt
+# Emitt
 
 > Tiny 250b functional event emitter / pubsub.
 
--   **Microscopic:** weighs less than 200 bytes gzipped
+-   **Microscopic:** weighs less than 250 bytes gzipped
 -   **Useful:** a wildcard `"*"` event type listens to all events
 -   **Familiar:** same names & ideas as [Node's EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)
 -   **Functional:** methods don't rely on `this`
--   **Great Name:** somehow [mitt](https://npm.im/mitt) wasn't taken
+-   **Great Name:** somehow [emitt](https://npm.im/emitt) wasn't taken
 
 Mitt was made for the browser, but works in any JavaScript runtime. It has no dependencies and supports IE9+.
 
@@ -31,23 +31,23 @@ Mitt was made for the browser, but works in any JavaScript runtime. It has no de
 This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
 
 ```sh
-$ npm install --save mitt
+$ npm install --save emitt
 ```
 
 Then with a module bundler like [rollup](http://rollupjs.org/) or [webpack](https://webpack.js.org/), use as you would anything else:
 
 ```javascript
 // using ES6 modules
-import mitt from 'mitt'
+import emitt from 'emitt'
 
 // using CommonJS modules
-var mitt = require('mitt')
+var emitt = require('emitt')
 ```
 
 The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https://unpkg.com):
 
 ```html
-<script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
+<script src="https://unpkg.com/emitt/dist/mitt.umd.js"></script>
 ```
 
 You can find the library on `window.mitt`.
@@ -55,9 +55,9 @@ You can find the library on `window.mitt`.
 ## Usage
 
 ```js
-import mitt from 'mitt'
+import emitt from 'emitt'
 
-const emitter = mitt()
+const emitter = emitt()
 
 // listen to an event
 emitter.on('foo', e => console.log('foo', e) )
@@ -77,8 +77,8 @@ emitter.off('foo', onFoo)  // unlisten
 ### Typescript
 
 ```ts
-import mitt from 'mitt';
-const emitter: mitt.Emitter = mitt();
+import emitt from 'emitt';
+const emitter: mitt.Emitter = emitt();
 ```
 
 ## Examples & Demos
@@ -131,7 +131,7 @@ If present, `"*"` handlers are invoked after type-matched handlers.
 **Parameters**
 
 -   `type` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The event type to invoke
--   `args` **...[Array<any>](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>**  Arguments for event listeners
+-   `args` **...[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 ## Contribute
 

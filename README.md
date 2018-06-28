@@ -7,7 +7,7 @@
 
 # Mitt
 
-> Tiny 200b functional event emitter / pubsub.
+> Tiny 250b functional event emitter / pubsub.
 
 -   **Microscopic:** weighs less than 200 bytes gzipped
 -   **Useful:** a wildcard `"*"` event type listens to all events
@@ -131,7 +131,7 @@ If present, `"*"` handlers are invoked after type-matched handlers.
 **Parameters**
 
 -   `type` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The event type to invoke
--   `evt` **Any?** Any value (object is recommended and powerful), passed to each handler
+-   `args` **...[Array<any>](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>**  Arguments for event listeners
 
 ## Contribute
 

@@ -1,7 +1,7 @@
 {
   "name": "mitter",
   "version": "1.2.0",
-  "description": "Tiny 200b functional Event Emitter / pubsub.",
+  "description": "Tiny 250b functional Event Emitter / pubsub.",
   "jsnext:main": "dist/mitt.es.js",
   "module": "dist/mitt.es.js",
   "main": "dist/mitt.js",

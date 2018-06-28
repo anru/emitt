@@ -50,12 +50,12 @@ export default function mitt(all: EventHandlerMap) {
 		 * If present, `"*"` handlers are invoked after type-matched handlers.
 		 *
 		 * @param {String} type  The event type to invoke
-		 * @param {Any} [evt]  Any value (object is recommended and powerful), passed to each handler
+		 * @param {Any} ...event_args  Any values (object is recommended and powerful), passed to each handler
 		 * @memberOf mitt
 		 */
-		emit(type: string, evt: any) {
-			(all[type] || []).slice().map((handler) => { handler(evt); });
-			(all['*'] || []).slice().map((handler) => { handler(type, evt); });
+		emit(type: string, ...args: Array<any>) {
+			(all[type] || []).slice().map((handler) => { handler(...args); });
+			(all['*'] || []).slice().map((handler) => { handler(type, ...args); });
 		}
 	};
 }

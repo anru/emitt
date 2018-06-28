@@ -5,7 +5,7 @@
   
 </p>
 
-# Emitt
+# Emitt is Extendet [mitt](https://github.com/developit/mitt)
 
 > Tiny 250b functional event emitter / pubsub.
 

@@ -1,0 +1,2 @@
+function n(n){return n=n||Object.create(null),{on:function(o,c){(n[o]||(n[o]=[])).push(c)},off:function(o,c){n[o]&&n[o].splice(n[o].indexOf(c)>>>0,1)},emit:function(o){for(var c=[],i=arguments.length-1;i-- >0;)c[i]=arguments[i+1];(n[o]||[]).slice().map(function(n){n.apply(void 0,c)}),(n["*"]||[]).slice().map(function(n){n.apply(void 0,[o].concat(c))})}}}module.exports=n;
+//# sourceMappingURL=mitt.js.map

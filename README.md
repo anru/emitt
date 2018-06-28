@@ -103,7 +103,7 @@ EMitt: Tiny (~250b) functional event emitter / pubsub.
 
 -   `all` **EventHandlerMap** 
 
-Returns **EMitt** 
+Returns **Emitt** 
 
 ### on
 

@@ -40,10 +40,10 @@ declare namespace mitt {
 		 * If present, `"*"` handlers are invoked prior to type-matched handlers.
 		 *
 		 * @param {string} type The event type to invoke
-		 * @param {any} [event] An event object, passed to each handler
+		 * @param {any[]} [...event_args] arguments passed to each handler
 		 *
 		 * @memberOf Mitt
 		 */
-		emit(type: string, event?: any): void;
+		emit(type: string, ...event_args: any[]): void;
 	}
 }

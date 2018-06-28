@@ -35,7 +35,7 @@
   "files": [
     "src",
     "dist",
-    "mitt.d.ts"
+    "emitt.d.ts"
   ],
   "babel": {
     "presets": [
@@ -64,7 +64,7 @@
       ]
     }
   },
-  "typings": "./mitt.d.ts",
+  "typings": "./emitt.d.ts",
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-eslint": "^7.1.1",

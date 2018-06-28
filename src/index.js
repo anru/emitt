@@ -13,11 +13,11 @@ type EventHandlerMap = {
   [type: string]: EventHandlerList,
 };
 
-/** Mitt: Tiny (~200b) functional event emitter / pubsub.
- *  @name mitt
- *  @returns {Mitt}
+/** EMitt: Tiny (~250b) functional event emitter / pubsub.
+ *  @name emitt
+ *  @returns {Emitt}
  */
-export default function mitt(all: EventHandlerMap) {
+export default function emitt(all: EventHandlerMap) {
 	all = all || Object.create(null);
 
 	return {
@@ -26,7 +26,7 @@ export default function mitt(all: EventHandlerMap) {
 		 *
 		 * @param  {String} type	Type of event to listen for, or `"*"` for all events
 		 * @param  {Function} handler Function to call in response to given event
-		 * @memberOf mitt
+		 * @memberOf emitt
 		 */
 		on(type: string, handler: EventHandler) {
 			(all[type] || (all[type] = [])).push(handler);
@@ -37,7 +37,7 @@ export default function mitt(all: EventHandlerMap) {
 		 *
 		 * @param  {String} type	Type of event to unregister `handler` from, or `"*"`
 		 * @param  {Function} handler Handler function to remove
-		 * @memberOf mitt
+		 * @memberOf emitt
 		 */
 		off(type: string, handler: EventHandler) {
 			if (all[type]) {
@@ -51,7 +51,7 @@ export default function mitt(all: EventHandlerMap) {
 		 *
 		 * @param {String} type  The event type to invoke
 		 * @param {any[]} [...event_args]  Any values (object is recommended and powerful), passed to each handler
-		 * @memberOf mitt
+		 * @memberOf emitt
 		 */
 		emit(type: string, ...args: Array<any>) {
 			(all[type] || []).slice().map((handler) => { handler(...args); });

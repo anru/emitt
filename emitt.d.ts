@@ -1,14 +1,14 @@
-declare var mitt: mitt.MittStatic;
+declare var emitt: emitt.EMittStatic;
 
-declare module "mitt" {
-    export = mitt;
+declare module "emitt" {
+    export = emitt;
 }
 
-declare namespace mitt {
+declare namespace emitt {
 	type Handler = (event?: any) => void;
 	type WildcardHandler = (type?: string, event?: any) => void;
 
-	interface MittStatic {
+	interface EMittStatic {
 		(all?: {[key: string]: Handler}): Emitter;
 	}
 
@@ -19,7 +19,7 @@ declare namespace mitt {
 		 * @param {string} type Type of event to listen for, or `"*"` for all events.
 		 * @param {Handler} handler Function to call in response to the given event.
 		 *
-		 * @memberOf Mitt
+		 * @memberOf Emitt
 		 */
 		on(type: string, handler: Handler): void;
 		on(type: "*", handler: WildcardHandler): void;
@@ -30,7 +30,7 @@ declare namespace mitt {
 		 * @param {string} type Type of event to unregister `handler` from, or `"*"`
 		 * @param {Handler} handler Handler function to remove.
 		 *
-		 * @memberOf Mitt
+		 * @memberOf Emitt
 		 */
 		off(type: string, handler: Handler): void;
 		off(type: "*", handler: WildcardHandler): void;
@@ -42,7 +42,7 @@ declare namespace mitt {
 		 * @param {string} type The event type to invoke
 		 * @param {any[]} [...event_args] arguments passed to each handler
 		 *
-		 * @memberOf Mitt
+		 * @memberOf Emitt
 		 */
 		emit(type: string, ...event_args: any[]): void;
 	}

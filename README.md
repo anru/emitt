@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://i.imgur.com/BqsX9NT.png" width="300" height="300" alt="emitt">
   <br>
-  <a href="https://www.npmjs.org/package/emitt"><img src="https://img.shields.io/npm/v/emitt.svg?style=flat" alt="npm"></a> <a href="https://travis-ci.org/anru/emitt"><img src="https://travis-ci.org/anru/emitt.svg?branch=master" alt="travis"></a> <a href="https://david-dm.org/anru/emitt"><img src="https://david-dm.org/anru/mitt/status.svg" alt="dependencies Status"></a> <a href="https://unpkg.com/emitt/dist/mitt.umd.js"><img src="http://img.badgesize.io/https://unpkg.com/emitt/dist/mitt.umd.js?compression=gzip" alt="gzip size"></a> <a href="https://packagephobia.now.sh/result?p=emitt"><img src="https://packagephobia.now.sh/badge?p=emitt" alt="install size"></a>
+  <a href="https://www.npmjs.org/package/emitt"><img src="https://img.shields.io/npm/v/emitt.svg?style=flat" alt="npm"></a> <a href="https://travis-ci.org/anru/emitt"><img src="https://travis-ci.org/anru/emitt.svg?branch=master" alt="travis"></a> <a href="https://david-dm.org/anru/emitt"><img src="https://david-dm.org/anru/mitt/status.svg" alt="dependencies Status"></a> <a href="https://unpkg.com/emitt/dist/mitt.js"><img src="http://img.badgesize.io/https://unpkg.com/emitt/dist/mitt.js?compression=gzip" alt="gzip size"></a> <a href="https://packagephobia.now.sh/result?p=emitt"><img src="https://packagephobia.now.sh/badge?p=emitt" alt="install size"></a>
   
 </p>
 

@@ -13,7 +13,7 @@
                                    
   
 
-/** EMitt: Tiny (~250b) functional event emitter / pubsub.
+/** EMitt: Tiny (~225b) functional event emitter / pubsub.
  *  @name emitt
  *  @returns {Emitt}
  */
@@ -53,12 +53,11 @@ function emitt(all                 ) {
 		 * @param {any[]} [...event_args]  Any values (object is recommended and powerful), passed to each handler
 		 * @memberOf emitt
 		 */
-		emit: function emit(type            ) {
-			var args = [], len = arguments.length - 1;
-			while ( len-- > 0 ) args[ len ] = arguments[ len + 1 ];
+		emit: function emit(type        ) {
+			var args = [].slice.call(arguments, 1);
 
-			(all[type] || []).slice().map(function (handler) { handler.apply(void 0, args); });
-			(all['*'] || []).slice().map(function (handler) { handler.apply(void 0, [ type ].concat( args )); });
+			(all[type] || []).map(function (handler) { handler.apply(void 0, args); });
+			(all['*'] || []).map(function (handler) { handler.apply(void 0, [ type ].concat( args )); });
 		}
 	};
 }

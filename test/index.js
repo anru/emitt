@@ -8,7 +8,7 @@ it('should default export be a function', () => {
 	expect(mitt).to.be.a('function');
 });
 
-describe('mitt#', () => {
+describe('emitt#', () => {
 	let events, inst;
 
 	beforeEach( () => {

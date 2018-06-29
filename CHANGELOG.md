@@ -3,8 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="1.1.3"></a>
-## [1.2.2](https://github.com/anru/emitt/compare/v1.1.3...v1.2.2) (2017-12-07)
+<a name="1.2.3"></a>
+## [1.2.3](https://github.com/anru/emitt/compare/v1.2.2...v1.2.3) (2018-06-29)
+
+* reduced gzip size from 250B to 224B
+
+<a name="1.2.2"></a>
+## [1.2.2](https://github.com/anru/emitt/compare/v1.1.3...v1.2.2) (2018-06-28)
 
 * emit now can take several arguments for passing to listeners
 

@@ -1,2 +1,2 @@
-function n(n){return n=n||Object.create(null),{on:function(o,c){(n[o]||(n[o]=[])).push(c)},off:function(o,c){n[o]&&n[o].splice(n[o].indexOf(c)>>>0,1)},emit:function(o){for(var c=[],i=arguments.length-1;i-- >0;)c[i]=arguments[i+1];(n[o]||[]).slice().map(function(n){n.apply(void 0,c)}),(n["*"]||[]).slice().map(function(n){n.apply(void 0,[o].concat(c))})}}}module.exports=n;
+module.exports=function(i){return i=i||Object.create(null),{on:function(n,c){(i[n]||(i[n]=[])).push(c)},off:function(n,c){i[n]&&i[n].splice(i[n].indexOf(c)>>>0,1)},emit:function(c){var o=[].slice.call(arguments,1);(i[c]||[]).map(function(n){n.apply(void 0,o)}),(i["*"]||[]).map(function(n){n.apply(void 0,[c].concat(o))})}}};
 //# sourceMappingURL=mitt.js.map

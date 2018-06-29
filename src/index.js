@@ -13,7 +13,7 @@ type EventHandlerMap = {
   [type: string]: EventHandlerList,
 };
 
-/** EMitt: Tiny (~250b) functional event emitter / pubsub.
+/** EMitt: Tiny (~225b) functional event emitter / pubsub.
  *  @name emitt
  *  @returns {Emitt}
  */
@@ -53,9 +53,11 @@ export default function emitt(all: EventHandlerMap) {
 		 * @param {any[]} [...event_args]  Any values (object is recommended and powerful), passed to each handler
 		 * @memberOf emitt
 		 */
-		emit(type: string, ...args: Array<any>) {
-			(all[type] || []).slice().map((handler) => { handler(...args); });
-			(all['*'] || []).slice().map((handler) => { handler(type, ...args); });
+		emit(type: string) {
+			const args = [].slice.call(arguments, 1);
+
+			(all[type] || []).map((handler) => { handler(...args); });
+			(all['*'] || []).map((handler) => { handler(type, ...args); });
 		}
 	};
 }

@@ -5,16 +5,14 @@ import fs from 'fs';
 const pkg = JSON.parse(fs.readFileSync('./package.json'));
 
 export default {
-	entry: 'src/index.js',
-	useStrict: false,
-	sourceMap: true,
+	input: 'src/index.js',
 	plugins: [
 		flow(),
 		buble()
 	],
-	targets: [
-		{ dest: pkg.main, format: 'cjs' },
-		{ dest: pkg.module, format: 'es' },
-		{ dest: pkg['umd:main'], format: 'umd', moduleName: pkg.name }
+	output: [
+		{ file: pkg.main, format: 'cjs', sourcemap: true, strict: false },
+		{ file: pkg.module, format: 'es', sourcemap: true, strict: false  },
+		{ file: pkg['umd:main'], format: 'umd', name: pkg.name, sourcemap: true, strict: false }
 	]
 };

@@ -7,12 +7,12 @@
 
 # Emitt is Extended [mitt](https://github.com/developit/mitt)
 
-> Tiny 250b functional event emitter / pubsub.
+> Tiny 224b functional event emitter / pubsub.
 
--   **Microscopic:** weighs less than 250 bytes gzipped
+-   **Microscopic:** weighs less than 225 bytes gzipped
 -   **Useful:** a wildcard `"*"` event type listens to all events
 -   **Familiar:** same names & ideas as [Node's EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter)
--   **Functional:** methods don't rely on `this`
+-   **Functional:** methods don't rely on `this`, also you can pass as many as you want event arguments to emit method
 -   **Great Name:** somehow [emitt](https://npm.im/emitt) wasn't taken
 
 EMitt was made for the browser, but works in any JavaScript runtime. It has no dependencies and supports IE9+.
@@ -97,7 +97,7 @@ const emitter: mitt.Emitter = emitt();
 
 ### emitt
 
-EMitt: Tiny (~250b) functional event emitter / pubsub.
+EMitt: Tiny (~225b) functional event emitter / pubsub.
 
 **Parameters**
 
@@ -131,7 +131,6 @@ If present, `"*"` handlers are invoked after type-matched handlers.
 **Parameters**
 
 -   `type` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The event type to invoke
--   `args` **...[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;any>** 
 
 ## Contribute
 

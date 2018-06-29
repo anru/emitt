@@ -1,0 +1,11 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "8.10",
+        "browsers": []
+      }
+    }],
+    "flow"
+  ]
+}

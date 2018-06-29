@@ -5,7 +5,7 @@ describe('emitt#', () => {
 	let events, inst;
 
 	it('should default export be a function', () => {
-		expect(typeof mitt).toBe('function')
+		expect(typeof mitt).toBe('function');
 	});
 
 	beforeEach( () => {
@@ -49,7 +49,7 @@ describe('emitt#', () => {
 			inst.on('baz:baT!', foo);
 
 			// workaround for jest bug
-			const pevents = Object.assign({}, events)
+			const pevents = Object.assign({}, events);
 
 			expect(events).toHaveProperty('FOO', [foo]);
 			expect(pevents).not.toHaveProperty('foo');
@@ -84,7 +84,7 @@ describe('emitt#', () => {
 			inst.off('baz:baT!', foo);
 
 			// workaround for jest bug
-			const pevents = Object.assign({}, events)
+			const pevents = Object.assign({}, events);
 
 			expect(events).toHaveProperty('FOO', []);
 			expect(pevents).not.toHaveProperty('foo');

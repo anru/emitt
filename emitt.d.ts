@@ -1,15 +1,11 @@
 declare var emitt: emitt.EMittStatic;
 
-declare module "emitt" {
-    export = emitt;
-}
-
 declare namespace emitt {
 	type Handler = (event?: any) => void;
 	type WildcardHandler = (type?: string, event?: any) => void;
 
 	interface EMittStatic {
-		(all?: {[key: string]: Handler}): Emitter;
+		(all?: { [key: string]: Handler }): Emitter;
 	}
 
 	interface Emitter {
@@ -46,4 +42,12 @@ declare namespace emitt {
 		 */
 		emit(type: string, ...event_args: any[]): void;
 	}
+}
+
+declare module "emitt" {
+	interface emittFunc {
+		(all?: { [key: string]: emitt.Handler }): emitt.Emitter;
+	}
+
+	export default emittFunc;
 }

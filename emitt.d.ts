@@ -5,7 +5,7 @@ export = emitt;
 export as namespace emitt;
 
 declare namespace emitt {
-  type Handler = (event?: any) => void;
+  type Handler = (event?: any, ...args: any[]) => void;
   type WildcardHandler = (type?: string, event?: any) => void;
 
   interface EMittStatic {

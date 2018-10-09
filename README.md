@@ -7,6 +7,14 @@
 
 # Emitt is Extended [mitt](https://github.com/developit/mitt)
 
+## Differencies from mitt
+
+Main difference is that you can emit as many arguments as you want:
+
+```js
+emitter.emit('event', 'b', 1, ['arg1', 'foo', 'bar'])
+```
+
 > Tiny 224b functional event emitter / pubsub.
 
 -   **Microscopic:** weighs less than 225 bytes gzipped
@@ -132,6 +140,8 @@ If present, `"*"` handlers are invoked after type-matched handlers.
 
 -   `type` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The event type to invoke
 
+-  `...args` **[any[]]** rest arguments for event
+
 ## Contribute
 
 First off, thanks for taking the time to contribute!
@@ -153,8 +163,8 @@ If don't, just open a [new clear and descriptive issue](../../issues/new).
 Pull requests are the greatest contributions, so be sure they are focused in scope, and do avoid unrelated commits.
 
 -   Fork it!
--   Clone your fork: `git clone https://github.com/<your-username>/mitt`
--   Navigate to the newly cloned directory: `cd mitt`
+-   Clone your fork: `git clone https://github.com/<your-username>/emitt`
+-   Navigate to the newly cloned directory: `cd emitt`
 -   Create a new branch for the new feature: `git checkout -b my-new-feature`
 -   Install the tools necessary for development: `npm install`
 -   Make your changes.
